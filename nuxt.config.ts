@@ -9,4 +9,5 @@ export default defineNuxtConfig({
     '@/assets/css/global.css',
     '@/assets/css/reset.css',
   ],
+  
 })

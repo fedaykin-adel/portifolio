@@ -2,11 +2,12 @@
 
 :root{
     /* cores */
-    --bg-color-default:#000000;
+    --gb-color-white:#fff;
+    --bg-color-default:#000;
     --color-white: #d1d1d1;
     --hover-1: #1e1e1e;
-    --color-black-trans:#00000052
-
+    --hover-2: #ececec;
+    --color-black-trans:#0004;
     /* tamanhos */
     --height-header: 75px
 }   
@@ -14,14 +15,13 @@
 body{
     background-color: var(--bg-color-default);
     color:var(--color-white);
-    
 }
 body a{
     text-decoration: none;
 }
 .container{
     margin:0 auto;
-    width: 90%;
+    width: 80%;
 }
 .container-display{
     display:flex;
@@ -32,4 +32,9 @@ body a{
     justify-content: center;
     align-items: center;
     height: 500px;
+}
+.svg{
+    width: 20px;
+    height: 20px;
+    filter:invert(100%) sepia(0%) saturate(0%) hue-rotate(263deg) brightness(104%)
 }

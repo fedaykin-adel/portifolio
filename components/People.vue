@@ -4,11 +4,10 @@
             <div class="presentation">
                 <div class="title-presetation">
                     <p>Gabriel Adelar,</p>
-
                 </div>
                 <div class="desc-presetation">
                     <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, rerum. Debitis accusantium deleniti enim iste dignissimos? Similique, exercitationem! Odit vero, numquam quae ratione maxime sunt reiciendis laudantium quaerat iure ipsum!
+                        Atuei como programador e coordenador de uma equipe de desenvolvimento, utilizando NodeJs, react, redis, docker, mongo, criação de serviçoes, endpoits para webhooks, templates, sites web resposivos e backend, aplicativos, webpscraping, 
                     </p>
 
                 </div>
@@ -29,16 +28,25 @@
                         delay:10000,
                         disableOnInteraction:true
                     }"
+                    :creative-effect="{
+                        prev: {
+                          shadow: false,
+                          translate: ['-20%', 0, -1]
+                        },
+                        next: {
+                          translate: ['100%', 0, 0]
+                        }
+                    }"
                 >
-                    <SwiperSlide
-                        v-for="(item, idx) in slides"
-                        :key="idx"
-                    >
+                    
+                    <SwiperSlide v-for="(item, idx) in data" :key="idx" class="blaa">
                         <div class="imags-slides">
                             <img :src="item.img" class="img-slide">
                             <p>{{item.name}}</p>
                         </div>
                     </SwiperSlide>
+
+                    <SwiperControls />
                 </Swiper>
             </div>
             
@@ -47,65 +55,40 @@
     </div>
 </template>
 <script>
-import { defineComponent } from '@vue/composition-api'
 
-export default defineComponent({
-    data:()=>{
-        return{
-            slides:[
-                {
-                    name:'Nuxt',
-                    img:'presetation/nuxt.png',
-                },
-                {
-                    name:'MongoDb',
-                    img:'presetation/mongodb.svg',
-                },
-                {
-                    name:'Node',
-                    img:'presetation/node.png',
-                },
-                {
-                    name:'Python',
-                    img:'presetation/python.png',
-                },
-            ]
-        }
-
-    },
-    setup() {
-        
-    },
-    mounted(){
-        // let list = 
-        // for(let x=0; x < list.length ; x++){
-        //     slides.append(list[x])
-        // }
-    },
-    
-})
+export default {
+    props:{
+        data:Array
+    }
+}
 </script>
 
 <style lang="scss" scoped>
-    .swiper{
-        width:150px;
-        height:150px;
+    .wrapper{
+        height: 80%;
     }
+    
     .swiper-style{
         width:50%;
-        
+
+        .swiper{
+            width: 200px;
+            position:relative;
+            
+        }
     }
     .imags-slides{
-        width:100%;
+        width:70%;
         height:100%;
         display:flex;
         justify-content: space-between;
         align-items:center;
         flex-direction: column;
+        margin: 0 auto;
+        gap:1em;
     }
     .img-slide{
         width: 80%;
-        height:80%;
     }
     .title-presetation{
         font-size: 3.5em;
@@ -116,6 +99,7 @@ export default defineComponent({
         align-items: center;
         justify-content:center;
         height: 150px;
+        width: 90%;
     }
     .desc-presetation{
         font-size:1.2em;
