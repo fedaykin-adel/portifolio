@@ -3,10 +3,9 @@
     <div class="line">
       <div class="container">
           <div class="header">
-            
             <h1 class="logo">
               <NuxtLink to="/" key="index" class="logo">
-                <img src="~/assets/imgs/header/code.svg" class="svg-logo" />
+                <img src="~/assets/imgs/header/code.svg" class="svg" />
                 <p class='txt-header'>Gabriel Adelar</p>
 
               </NuxtLink>
@@ -84,154 +83,165 @@
   </script>
 
   <style scoped lang="scss">
-    
-    .line{
-        border-bottom:solid 1px var(--color-white);
-        .header{
-          display: flex;
-          justify-content: space-between;
-          .logo{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 1em;
+    @mixin tablet{
+        
+      @media screen and (max-width: 950px){
+        .txt-header-opt{
+          display:none;
+        }   
+        .item-header {
+          &:hover{
+            .txt-header-opt{
+              display:block;
+              gap:1em;
+            }
           }
-
+        
+        }   
+      }
+    }
+    @mixin mobile{
+      @media screen and (max-width: 765px){
+        .txt-header-opt{
+          display:none;
+        }      
+        .itens-header{
+          display: none;
+        }
+        .logo{
+          width: 100%;
+          justify-content: space-between;
+        }
+        .display-header-mob{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          height: 36px;
+          width: 36px;
+          
+          &::before{
+            background-color: var(--color-white);
+            width:20px;
+            height:1px;
+            content:""; 
+            transform: translateY(-5px) rotate(0deg);
+            transition: transform 200ms ease;
+          }
+          &::after{
+            background-color: var(--color-white);
+            width:20px;
+            height:1px;
+            content:"";  
+            transform: translateY(4px) rotate(0deg);
+            transition: transform 200ms ease;
+          }
           
         }
-    }
-    
-    .txt-header{
-      font-weight:700;
-      text-align: center;
-    }
-    .itens-header{
-      display:flex;
-      align-items: center;
-      justify-content: space-around;
-      
-      width:70%
-    }
-    .item-header{
-      width: 20%;
-      text-decoration: none;
-      color:var(--color-white);
-      justify-content: space-evenly;
-      display: flex;
-      align-items: center;
-      height: 75px;
-      
-      &:hover{
-        background-color: var(--hover-1);
-      }
-    }
-    .svg-logo{
-      width: 35px;
-      height: 35px;
-      filter:invert(100%) sepia(0%) saturate(0%) hue-rotate(263deg) brightness(104%)
-    }
-    
-    p,a{
-      font-family: "Inter", sans-serif;
-      font-style: normal;
-      color:var(--color-white)
-    }
-    .txt-header-opt{
-      display:block
-    }
-    .display-header-mob{
-      display: none;
-    }
-    .header-mob{
-      height:0;
-      display: none;
-      .item-header-mob{
-        display: none;
-      }
-    }
-    @media screen and (max-width: 950px){
-      .txt-header-opt{
-        display:none;
-      }   
-      .item-header {
-        
-        &:hover{
-          .txt-header-opt{
-            display:block;
-            gap:1em;
+        .header-cross-display{
+          &::before{
+            transform: translateY(2px) rotate(45deg) 
+  
+          }
+          &::after{
+            transform: translateY(0px) rotate(-45deg)
           }
         }
-      
-      }   
+        .header-mob{
+          display: block;
+          width: 100%;
+          background-color:var(--bg-color-default);
+          height:100vh;
+          position:fixed;
+          z-index:2;
+          top:0;
+          left:0;
+          transition: 400ms easy;
+          padding-top:37px;
+          .item-header-mob{
+            padding:0 0 0 20px;
+            width: 100%;
+            text-decoration: none;
+            color:var(--color-white);
+            gap:1em;
+            display: flex;
+            align-items: center;
+            height: 75px;
+          }
+        }
+      }
     }
-    @media screen and (max-width: 765px){
-      .txt-header-opt{
-        display:none;
-      }      
-      .itens-header{
+    .line{
+      border-bottom:solid 1px var(--color-white);
+      z-index: 3;
+    }
+
+    .header{
+      
+      display: flex;
+      justify-content: space-between;
+      .display-header-mob{
         display: none;
       }
-      .logo{
-        width: 100%;
-        justify-content: space-between;
+      .header-mob{
+        height:0;
+        display: none;
+        .item-header-mob{
+          display: none;
+        }
       }
-      .display-header-mob{
+      .logo{
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 36px;
-        width: 36px;
-        
-        &::before{
-          background-color: var(--color-white);
-          width:20px;
-          height:1px;
-          content:""; 
-          transform: translateY(-5px) rotate(0deg);
-          transition: transform 200ms ease;
-        }
-        &::after{
-          background-color: var(--color-white);
-          width:20px;
-          height:1px;
-          content:"";  
-          transform: translateY(4px) rotate(0deg);
-          transition: transform 200ms ease;
-        }
-        
-      }
-      .header-cross-display{
-        &::before{
-          transform: translateY(2px) rotate(45deg) 
-
-        }
-        &::after{
-          transform: translateY(0px) rotate(-45deg)
+        gap: 1em;
+        .txt-header{
+          font-weight:700;
+          text-align: center;
         }
       }
-      .header-mob{
-        display: block;
-        width: 100%;
-        background-color:var(--bg-color-default);
-        height:100%;
-        position:fixed;
-        z-index:2;
-        top:37px;
+      .itens-header{
+        display:flex;
+        align-items: center;
+        justify-content: space-around;
+        
+        width:70%;
 
-        transition: 400ms easy;
-        .item-header-mob{
-          padding:0 0 0 20px;
-          width: 100%;
+        .item-header{
+          width: 20%;
           text-decoration: none;
           color:var(--color-white);
           gap:1em;
+          justify-content: center;
           display: flex;
           align-items: center;
-          height: 75px;
+          padding:10px 20px;
+          &:hover{
+            background-color: var(--hover-1);
+          }
+          .txt-header-opt{
+            display:block;
+            font-weight: 400px;
+            font-size: 0.875rem;
+          }
+          .svg{
+            width:15px;
+            height:15px;
+          }
+          @include tablet
         }
+
       }
+      @include mobile
     }
+
+    
+
+    
+    
+    
+    
+    
     
   
   </style>

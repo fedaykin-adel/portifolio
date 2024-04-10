@@ -2,7 +2,7 @@
     <div class=" arround-cards">
         <div v-for="(item, idx) in data" :key="idx" class="cards">
             <div class="arround-card">
-                <div class="card">
+                <CardsCard class="card" :style="{'--direction':'row'}">
                     <div class="image-margin">
                         <img :src="item.imageCompany" class="image"/>
                     </div>
@@ -11,39 +11,36 @@
                             <p class="text-title">{{ item.company }} - {{ item.cargo}}</p>
                         </div>
                         <div class="locals">
-                            <div v-for="(local, idx) in item.localwork" :key="idx">
-                                <div class="border-withi-radius">
-                                    {{ local }}
-                                </div>
+                            <div v-for="(local, idx) in item.localwork" :key="idx" class="local">
+                                <p>{{ local }}</p>
                             </div>
                         </div>
-                        <div>
-                            {{ item.dateIn }} - {{ item.dateAt }}
+                        <div class="date">
+                            <p>{{ item.dateIn }} - {{ item.dateAt }}</p>
                         </div>
             
-                        <div>
-                            {{ item.resume }}
+                        <div class="resume">
+                            <p>{{ item.resume }}</p>
                         </div>
             
                         <div class="skills">
-                            <div v-for="(skill, idxx) in item.skills" :key="idxx" class="img-select">
+                           
+                            <CardsSkillsImg 
+                                v-for="(skill, idxx) in item.skills" 
+                                :key="idxx" 
+                                :img="skill.img" 
+                                :title="skill.title"
+                            />                                
                                 
-                                <div class="border-withi-radius img">
-                                    <img class="img-skill" :src="`/images/${skill.img}`"/>
-                                </div>
-
-                                <div class="title">
-                                    <p>{{skill.title}}</p>
-                                </div>
-
-                            </div>
                         </div>
                     </div>
-                </div>
+                
+                    
+                </CardsCard>
             </div>
             <div class="lines">
                 <div class="line" />
-                <img src="/images/point.svg" class="svg">
+                <img src="/images/point.svg" class="svg" />
                 <div class="line" />
             </div>
             <div class="card-none"/>
@@ -56,7 +53,7 @@
         display: flex;
         flex-direction: column;
         align-items:center;
-
+        padding-bottom: 40px;
         .cards{
             display:flex;
             width:100%;
@@ -68,10 +65,7 @@
                 width:100%;
                 .card{
         
-                    border:solid 1px var(--color-white);
-                    border-radius: 15px;
                     width:100%;
-                    padding:15px 0;
                     display:flex;
                     gap: 1em;
                     
@@ -83,52 +77,42 @@
                     }
 
                     .content-card{
-                        width:80%;
+                        width:100%;
                         display: flex;
                         flex-direction: column;
                         gap: 1em;
 
                         .skills{
-                            flex-wrap: wrap;
-                            
-                            .img-skill{
-                                width: 20px;
-                                height:20px;
-                            }
-                            .img-select{
-                                width:45px;
-                                position: relative;
-                                filter: grayscale(0.65);
-                                &:hover{
-                                    filter: grayscale(0);
-                                    border-color:var(--hover-2)
-                                }
-                                &:hover .title{
-                                    display: flex;
-                                    justify-content: center;
-                                }
-                                .img{
-                                    width:25px;
-                                    display: flex;
-                                    justify-content: center;
-                                }
-                                
-                                .title{
-                                    padding:5px 15px;
-                                    display:none;
-                                    width:170%;
-                                    border-radius: 30px;
-                                    background-color: var(--hover-1);
-                                    position: absolute;
-                                    bottom:-26px;
-                                    left:15px;
-                                }
-                            }
-                            
-                        }
-                        .locals,.skills{
                             display: flex;
                             gap: 1em;
+                            flex-wrap: wrap;
+                            
+                        }
+                        .date{
+                            p{
+                                font-size: 0.7em;
+                            }
+                        }
+                        .resume{
+                            p{
+                                font-size: 0.9em;
+                            }
+                        }
+                        .locals{
+                            display: flex;
+                            gap: 1em;
+                            .local{
+                                border: solid 1px var(--hover-1);
+                                border-radius: 15px;
+                                padding:10px;
+                                p{
+                                    font-size: 0.65em;
+                                }
+                                &:hover{
+                                    border-color:var(--hover-2);
+                                    background-color:var(--hover-1);
+                                }
+                            }
                         }
                     }
                 }
@@ -165,14 +149,9 @@
     
     
     
-    .border-withi-radius{
-        border: solid 1px var(--color-white);
-        border-radius: 15px;
-        padding:10px;
-    }
-    
 </style>
 <script>
+
 export default {
     props:{
         data:Array

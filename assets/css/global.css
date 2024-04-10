@@ -7,15 +7,27 @@
     --color-white: #d1d1d1;
     --hover-1: #1e1e1e;
     --hover-2: #ececec;
+    
     --color-black-trans:#0004;
-    /* tamanhos */
-    --height-header: 75px
+    --txt-dark:#3b3b3b;
+    --border-color:#2e2e2e;
+    --sec-text:#e1e1e1;
+    --txt-white:#fff;
+    /* filter */
+    --filter:invert(100%) sepia(0%) saturate(0%) hue-rotate(263deg) brightness(104%)
 }   
 
 body{
     background-color: var(--bg-color-default);
     color:var(--color-white);
+    
 }
+p,a{
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    color:var(--color-white);
+    letter-spacing: 1px;
+  }
 body a{
     text-decoration: none;
 }
@@ -36,5 +48,5 @@ body a{
 .svg{
     width: 20px;
     height: 20px;
-    filter:invert(100%) sepia(0%) saturate(0%) hue-rotate(263deg) brightness(104%)
+    filter:var(--filter)
 }

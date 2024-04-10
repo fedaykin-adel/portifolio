@@ -1,10 +1,11 @@
 <template>
-    <div class="card  card-bg-img" @mousemove="updatePosMouse" 
+    <div class="card  " @mousemove="updatePosMouse" 
         :style="{'--rot-x':rX, '--rot-y':rY,'--drop-x':posX,'--drop-y':posY}">
         <div class="card-bg-img">
-            
             <slot/>
+
         </div>
+            
             
     </div>
 </template>
@@ -14,8 +15,8 @@ import { defineComponent } from '@vue/composition-api'
 export default defineComponent({
     data:()=>{
         return{
-            posx:0,
-            posy:0,
+            posX:0,
+            posY:0,
             rY:0,
             rX:0,
         }
@@ -49,12 +50,8 @@ export default defineComponent({
 </script>
 <style lang="scss" scoped>
     .card{
-        border:solid 1px var(--color-white);
+        border:solid 1px var(--border-color);
         border-radius: 15px;
-        width:29%;
-        padding:20px;
-        margin-bottom:1%;
-        position:relative;
         
         --bg-color:#0000ff03;
         --drop-color:#0000ff26;
@@ -62,14 +59,20 @@ export default defineComponent({
         --rot-y:0;
         --drop-x:0;
         --drop-y:0;
+        --direction:column;
 
+        --bg-img:url();
+        --pos-img:right 40% / 40%;
         background: linear-gradient(90deg, var(--bg-color-default) 0%, var(--bg-color-default) 60%, 
             var(--color-black-trans) 100%), 
-            no-repeat right 40% / 40% url(); 
+            no-repeat var(--pos-img) var(--bg-img); 
 
-        
-        
         &-bg-img{
+            padding:20px;
+            display: flex;
+
+            flex-direction: var(--direction);
+            gap: 1em;
             &:hover{
                 background-color:var(--bg-color);
                 background-image: radial-gradient(
@@ -77,12 +80,13 @@ export default defineComponent({
                     var(--drop-color), 
                     transparent
                 );
-
+                border-radius: 15px;
             }
         }
         
         &:hover{
             transform: perspective(1000px) rotateX(var(--rot-x)) rotateY(var(--rot-y)) scale(1.01) ;
+            border:solid 1px var(--color-white);
         }
     }
 </style>

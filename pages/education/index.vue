@@ -1,5 +1,5 @@
 <template>
-    <Titlepage name="Experience"/>  
+    <UtilsTitlepage name="Experience"/>  
 
     <Education />
 </template>

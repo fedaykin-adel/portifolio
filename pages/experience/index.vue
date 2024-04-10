@@ -1,5 +1,5 @@
 <template>
-    <Titlepage name="Experience"/>  
+    <UtilsTitlepage name="Experience"/>  
     
     <Experience :data="data"/>
 
@@ -42,7 +42,7 @@ export default{
                     title:'php',
                     img:'php-icon.png'
                 }],
-                localwork:['in-the-company','home']
+                localwork:['Presencial','Híbrido']
             },{
                 company:'Advance telecom',
                 cargo:'Full Stack pleno nível 1 ',
@@ -69,7 +69,7 @@ export default{
                     title:'mysql',
                     img:'mysql-icon.png'
                 }],
-                localwork:['in-the-company','home']
+                localwork:['Presencial','Híbrido']
             },{
                 company:'Worksmidia',
                 cargo:'Full Stack pleno',
@@ -102,7 +102,7 @@ export default{
                     title:'python',
                     img:'python.png'
                 }],
-                localwork:['in-the-company','home']
+                localwork:['Híbrido']
             },{
                 company:'spread/qualicorp',
                 cargo:'Full Stack pleno',
@@ -129,7 +129,7 @@ export default{
                     title:'mongodb',
                     img:'mongodb.svg'
                 }],
-                localwork:['in-the-company','home']
+                localwork:['Home']
             },{
                 company:'Digigrow',
                 cargo:'Programador sênior',
@@ -156,7 +156,7 @@ export default{
                     title:'cypress',
                     img:'cypress.png'
                 }],
-                localwork:['in-the-company','home']
+                localwork:['Híbrido']
             },{
                 company:'Maverick inc ',
                 cargo:'Desenvolvedor Full Stack',
@@ -183,7 +183,7 @@ export default{
                     title:'cypress',
                     img:'cypress.png'
                 }],
-                localwork:['in-the-company','home']
+                localwork:['Presencial']
             }]
         }
     }
