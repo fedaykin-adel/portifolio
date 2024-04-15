@@ -17,6 +17,7 @@ jobs:
         run: |
           yarn install --immutable --immutable-cache --check-cache
           yarn build
+          mkdir -p build
           touch build/.nojekyll
           cp build/404.html build/index.html
 
