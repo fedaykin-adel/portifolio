@@ -1,37 +1,46 @@
 <!-- Please remove this file from your project -->
 <template>
-    <div class="line">
+    <nav class="line bla" id="line">
       <div class="container">
-          <div class="header">
-            <h1 class="logo">
-              <NuxtLink to="/" key="index" class="logo">
-                <img src="~/assets/imgs/header/code.svg" class="svg" />
-                <p class='txt-header'>Gabriel Adelar</p>
-
-              </NuxtLink>
+        <div class="navbar">
+          <h1>
+            <NuxtLink to="/" key="index" class="logo">
+              <img src="~/assets/imgs/header/code.svg" class="svg" />
               
-              <div :class="[classExisted, {'header-cross-display':expandMobAddClass}] " @click="expandMob"></div>
+              <p class='txt-header'>Gabriel Adelar</p>
+            </NuxtLink>
+          </h1>  
 
-            </h1>
-
-            <div v-if="expandMobAddClass" :class="{'header-mob':expandMobAddClass}">
-              <NuxtLink :to="item.route" v-for="(item, id) in data" class="item-header-mob" exact  :key="id">
-                <img :src="item.image" class="svg" v-if="item.image"/>
-                <p class="">{{item.name}}</p>
-              </NuxtLink>
-            </div>
-
-            <div class="itens-header" >
-              <NuxtLink :to="item.route" v-for="(item, id) in data" class="item-header" exact  :key="id">
-                <img :src="item.image" class="svg" v-if="item.image"/>
-                <p class="txt-header-opt">{{item.name}}</p>
-              </NuxtLink>
-              
-            </div>
-            
+          <div :class="[classExisted, {'header-cross-display':expandMobAddClass}] " @click="expandMob"></div>
+          
+          <!-- desk -->
+          <div class="header-desk" >
+            <NuxtLink :to="item.route" v-for="(item, id) in data" class="item-header" exact  :key="id">
+              <img :src="item.image" class="svg" v-if="item.image"/>
+              <p class="txt-header-opt">{{item.name}}</p>
+            </NuxtLink>
           </div>
+
+          <!-- mob -->
+          <div v-if="expandMobAddClass" :class="{'header-mob':expandMobAddClass}">
+            <NuxtLink :to="item.route" v-for="(item, id) in data" class="item-header-mob" exact  :key="id" @click="expandMob">
+              <img :src="item.image" class="svg" v-if="item.image"/>
+              <p class="">{{item.name}}</p>
+            </NuxtLink>
+          </div>
+
         </div>
-    </div>
+
+        <!-- <div :class="`${expandMobAddClass ? 'header-mob':'itens-header'}`">
+          <NuxtLink :to="item.route" v-for="(item, id) in data" :class="`${expandMobAddClass ? 'item-header-mob':'item-header'}`" exact  :key="id" @click="expandMob">
+            <img :src="item.image" class="svg" v-if="item.image"/>
+            <p class="">{{item.name}}</p>
+          </NuxtLink>
+        </div> -->
+
+      </div>
+    
+    </nav>
 
     <div class="container">
       <slot/>
@@ -102,16 +111,21 @@
     }
     @mixin mobile{
       @media screen and (max-width: 765px){
+        
         .txt-header-opt{
           display:none;
         }      
-        .itens-header{
+        .header-desk{
           display: none;
         }
+
+        
+        
         .logo{
           width: 100%;
-          justify-content: space-between;
+          justify-content: space-evenly;
         }
+        
         .display-header-mob{
           display: flex;
           flex-direction: column;
@@ -154,10 +168,10 @@
           height:100vh;
           position:fixed;
           z-index:2;
-          top:0;
+          top:37px;
           left:0;
           transition: 400ms easy;
-          padding-top:37px;
+          
           .item-header-mob{
             padding:0 0 0 20px;
             width: 100%;
@@ -170,18 +184,32 @@
           }
         }
       }
+
+
+      
     }
-    .line{
-      border-bottom:solid 1px var(--color-white);
-      z-index: 3;
+    @mixin line{
+      @media screen and (max-width: 765px){
+        .line{
+          position: sticky;
+          top: 0;
+          left:0;
+          z-index: 10;
+        }
+      } 
     }
 
-    .header{
-      
-      display: flex;
-      justify-content: space-between;
+    .line{
+      border-bottom:solid 1px var(--color-white);
+      background-color: var(--bg-color-default);
       .display-header-mob{
         display: none;
+      }
+      .navbar{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
       }
       .header-mob{
         height:0;
@@ -200,7 +228,7 @@
           text-align: center;
         }
       }
-      .itens-header{
+      .header-desk{
         display:flex;
         align-items: center;
         justify-content: space-around;
@@ -228,22 +256,13 @@
             width:15px;
             height:15px;
           }
-          @include tablet
+          @include tablet;
         }
 
       }
-      @include mobile
+      @include mobile;
     }
-
-    
-
-    
-    
-    
-    
-    
-    
-  
+    @include line;
   </style>
   
   

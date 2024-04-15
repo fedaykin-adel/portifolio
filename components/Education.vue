@@ -1,30 +1,161 @@
 <template>
-    <div>
-        <div class="title-abilities">
-            <div class="line width-20" ></div>
-            <p class="text-abilities"> faculty </p>
-            <div class="line width" ></div>
+    <div class=" arround-cards">
+        <div v-for="(item, idx) in data" :key="idx" class="cards">
+            <div class="arround-card">
+                <CardsCard class="card" :style="{'--direction':'row'}">
+                    <CardsImgCompany :img="item.imageCompany"/>
+            
+                    <div class="content-card">
+                        <div class="title">
+                            <p class="text-title">{{ item.university }} - {{ item.curso}}</p>
+                        </div>
+                        <div class="locals">
+                            <div v-for="(local, idx) in item.localwork" :key="idx" class="local">
+                                <p>{{ local }}</p>
+                            </div>
+                        </div>
+                        <div class="date">
+                            <p>{{ item.dateIn }} - {{ item.dateAt }}</p>
+                        </div>
+            
+                        <CardsResume class="resume" :txt="item.resume"/>
+                        <div class="skills">
+                           
+                            <CardsSkillsImg 
+                                v-for="(skill, idxx) in item.skills" 
+                                :key="idxx" 
+                                :img="skill.img" 
+                                :title="skill.title"
+                            />                                
+                                
+                        </div>
+                    </div>
+                
+                    
+                </CardsCard>
+            </div>
+            <div class="lines">
+                <div class="line" />
+                <img src="/images/point.svg" class="svg" />
+                <div class="line" />
+            </div>
+            <div class="card-none"/>
         </div>
 
-        
-    </div>
+    </div>    
+
 </template>
-<style lang="scss" scoped>
-    .title-abilities{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        gap:1em;
-        padding:15px 0;
-        .line{
-            height: 1px;
-            background-color: var(--hover-1);
+<style scoped lang="scss">
+.arround-cards{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    padding-bottom: 40px;
+    .cards{
+        display:flex;
+        width:100%;
+        position:relative;
+        &:nth-child(2n){
+            flex-direction: row-reverse;
         }
-        .width{
-            width: 100%;
+        .arround-card{
+            width:100%;
+            .card{
+    
+                width:100%;
+                display:flex;
+                gap: 1em;
+                
+                .image-margin{
+                    margin-left:15px;
+                    .image{
+                        width:55px;
+                    }
+                }
+
+                .content-card{
+                    width:100%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1em;
+                    .title{
+                        p{
+                            color:var(--txt-white);
+                            font-weight: 600;
+                        }
+                    }
+                    .resume{
+                        height: 40px;
+                    }
+                    .skills{
+                        display: flex;
+                        gap: 1em;
+                        flex-wrap: wrap;
+                        
+                    }
+                    .date{
+                        p{
+                            font-size: 0.75em;
+                        }
+                    }
+                    
+                    .locals{
+                        display: flex;
+                        gap: 1em;
+                        .local{
+                            border: solid 1px var(--hover-1);
+                            border-radius: 15px;
+                            padding:10px;
+                            p{
+                                font-size: 0.65em;
+                            }
+                            &:hover{
+                                border-color:var(--hover-2);
+                                background-color:var(--hover-1);
+                            }
+                        }
+                    }
+                }
+            }
         }
-        .width-20{
-            width:20px
+
+        .lines{
+            width:50px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap:1em;
+            padding:0 15px;
+            box-sizing: border-box;
+            .line{
+                width: 1px;
+                height: 50%;
+                background-color: var(--color-white);
+                
+            }
+        }
+        .card-none{
+            width:100%;
+        }
+        @media screen and (max-width: 1024px) {
+            .card-none,.lines{
+                display: none;
+            }
+            .arround-card{
+                margin:15px 0;
+            }
         }
     }
+}
+
+
+    
 </style>
+<script>
+export default {
+    props:{
+        data:Array
+    },
+    
+}
+</script>

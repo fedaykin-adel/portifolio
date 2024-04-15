@@ -6,14 +6,14 @@
 </template>
 
 <script>
-import noImage from '~/assets/imgs/no-img.svg'
+
 export default{
     data:()=>{
         return{
             data:[{
                 company:'Avec',
                 cargo:'Estágio em desenvolvimento',
-                imageCompany:noImage,
+                imageCompany:'',
                 dateIn:'Junho 2019',
                 dateAt:' Abril 2020',
                 resume:'Desenvolvimento web, automações de formulários, desenvolvimento de web scraping, criação de endpoits para webhooks',
@@ -46,7 +46,7 @@ export default{
             },{
                 company:'Advance telecom',
                 cargo:'Full Stack pleno nível 1 ',
-                imageCompany:noImage,
+                imageCompany:'',
                 dateIn:'Junho 2020',
                 dateAt:'Agosto 2020',
                 resume:'Desenvolvimento de aplicações front end, estrutura de back end e criação de web chat',
@@ -73,7 +73,7 @@ export default{
             },{
                 company:'Worksmidia',
                 cargo:'Full Stack pleno',
-                imageCompany:noImage,
+                imageCompany:'',
                 dateIn:'Nov 2020',
                 dateAt:'Fevereiro  2022',
                 resume:'Desenvolvimento full-stack de sites, criação de aplicativos, criação de web chat, banco de dados, criação de web scraping',
@@ -106,7 +106,7 @@ export default{
             },{
                 company:'spread/qualicorp',
                 cargo:'Full Stack pleno',
-                imageCompany:noImage,
+                imageCompany:'',
                 dateIn:'Fevereiro 2022',
                 dateAt:'Julho  2022',
                 resume:'Desenvolvimento em back-end e front-end ,micro serviço para aplicações web',
@@ -133,7 +133,7 @@ export default{
             },{
                 company:'Digigrow',
                 cargo:'Programador sênior',
-                imageCompany:noImage,
+                imageCompany:'',
                 dateIn:'Outubro de 2022',
                 dateAt:'Fevereiro 2023',
                 resume:"Coordenador de uma equipe de dev's e QA's para criação de Hub de e-commerce",
@@ -160,10 +160,10 @@ export default{
             },{
                 company:'Maverick inc ',
                 cargo:'Desenvolvedor Full Stack',
-                imageCompany:noImage,
+                imageCompany:'',
                 dateIn:'Março de 2023',
                 dateAt:'setembro de 2023',
-                resume:"desenvolvimento de sistemas para blog e admin, refatoração de layout e códigos em vtex(react), atualização de aplicações e fatoração de código em WordPress, criação de web scraping com interface de interação",
+                resume:"Desenvolvimento de sistemas para blog e admin, refatoração de layout e códigos em vtex(react), atualização de aplicações e fatoração de código em WordPress, criação de web scraping com interface de interação",
                 skills:[{
                     title:'node js',
                     img:'node.png'

@@ -26,7 +26,8 @@
         border-radius: 10px;
         &:hover{
             filter: grayscale(0);
-            border-color:var(--hover-2)
+            border-color:var(--hover-2);
+            background-color:var(--hover-1);
         }
         &:hover .title{
             display: flex;
@@ -47,6 +48,9 @@
             position: absolute;
             bottom:-26px;
             left:15px;
+            p{
+                font-size: 0.8em;
+            }
         }
     }
 </style>

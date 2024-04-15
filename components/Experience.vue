@@ -3,11 +3,10 @@
         <div v-for="(item, idx) in data" :key="idx" class="cards">
             <div class="arround-card">
                 <CardsCard class="card" :style="{'--direction':'row'}">
-                    <div class="image-margin">
-                        <img :src="item.imageCompany" class="image"/>
-                    </div>
+                    <CardsImgCompany :img="item.imageCompany"/>
+            
                     <div class="content-card">
-                        <div>
+                        <div class="title">
                             <p class="text-title">{{ item.company }} - {{ item.cargo}}</p>
                         </div>
                         <div class="locals">
@@ -19,10 +18,7 @@
                             <p>{{ item.dateIn }} - {{ item.dateAt }}</p>
                         </div>
             
-                        <div class="resume">
-                            <p>{{ item.resume }}</p>
-                        </div>
-            
+                        <CardsResume :txt="item.resume"/>
                         <div class="skills">
                            
                             <CardsSkillsImg 
@@ -81,7 +77,12 @@
                         display: flex;
                         flex-direction: column;
                         gap: 1em;
-
+                        .title{
+                            p{
+                                color:var(--txt-white);
+                                font-weight: 600;
+                            }
+                        }
                         .skills{
                             display: flex;
                             gap: 1em;
@@ -90,14 +91,10 @@
                         }
                         .date{
                             p{
-                                font-size: 0.7em;
+                                font-size: 0.75em;
                             }
                         }
-                        .resume{
-                            p{
-                                font-size: 0.9em;
-                            }
-                        }
+                        
                         .locals{
                             display: flex;
                             gap: 1em;

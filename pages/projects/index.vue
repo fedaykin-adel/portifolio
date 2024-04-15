@@ -7,13 +7,12 @@
     
 </style>
 <script >
-import noImage from '~/assets/imgs/no-img.svg'
 export default {
     
     data:()=>{
         return{
             data:[{
-                image:noImage,
+                image:'',
                 title:'Sorteador',
                 git:'https://github.com/fedaykin-adel/sorteador-nuxt',
                 desc:'Web em Nuxt',
@@ -22,9 +21,10 @@ export default {
                 tecnologis:[{
                     title:'nuxt',
                     img:'nuxt.png'
-                }]
+                }],
+                color:'#fa0505'
             },{
-                image:noImage,
+                image:'',
                 title:'Ia de reconhecimento',
                 git:'https://github.com/fedaykin-adel/ia_rec',
                 desc:'Ia em tensorflow e cython',
@@ -41,7 +41,7 @@ export default {
                     img:'cython.svg'
                 }]
             },{
-                image:noImage,
+                image:'',
                 title:'Game pong',
                 git:'https://github.com/fedaykin-adel/game-pong',
                 desc:'Game em pygame',
@@ -55,7 +55,7 @@ export default {
                     img:'pygame.png'
                 }]
             },{
-                image:noImage,
+                image:'',
                 title:'Game snake',
                 git:'https://github.com/fedaykin-adel/game-snake',
                 desc:'Game em pygame',
@@ -69,7 +69,7 @@ export default {
                     img:'pygame.png'
                 }]
             },{
-                image:noImage,
+                image:'',
                 title:'Portifolio Nuxt3',
                 git:'https://github.com/fedaykin-adel/portifolio',
                 desc:'Portifolio em Nuxt',
@@ -78,6 +78,9 @@ export default {
                 tecnologis:[{
                     title:'nuxt',
                     img:'nuxt.png'
+                },{
+                    title:'Sass',
+                    img:'sass.png'
                 }]
             }]
         }

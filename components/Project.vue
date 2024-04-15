@@ -1,9 +1,8 @@
 <template>
     <div class=" content-project">
-        <CardsCard v-for="(item, id) in data" :key="id" class="card"> 
-            <div class="image" >
-                <img :src="item.image">
-            </div>
+        <CardsCard v-for="(item, id) in data" :key="id" :color="item.color" class="card"> 
+            <CardsImgCompany :img="item.image"/>
+            
             <div class="header">
                 <div class="title">
                     <p>{{ item.title }}</p>
@@ -16,9 +15,9 @@
                     <p>{{ item.desc }}</p>
                 </div>
             </div>
-            <div class="resume">
-                <p>{{ item.resume }}</p>
-            </div>
+
+            <CardsResume class="resume" :txt="item.resume"/>
+            
             <div class="footer">
                 <div class="date">
                     <p>{{ item.date }}</p>
@@ -40,15 +39,6 @@
 <style scoped lang="scss">
     
     
-    .image{
-        width: 50px;
-    }
-    
-    
-
-    
-    
-    
     .content-project{
         display:flex;
         flex-wrap: wrap;
@@ -58,10 +48,13 @@
             width:30%;
             gap:1em;
             margin-bottom:1%;
+            
+            
             .line{
                 background-color: var(--color-white);
                 height: 1px;
             }
+
             .header{
                 display: flex;
                 flex-direction: column;
@@ -84,7 +77,6 @@
                         border: solid 1px var(--hover-1);
                         border-radius: 10px;
                         padding:5px;
-                        
                         .svg{
                             width: 15px;
                             height:15px;
@@ -92,6 +84,8 @@
                     
                         &:hover{
                             border-color:var(--hover-2);
+                            background-color:var(--hover-1);
+                        
                         }
                     }
                 }
@@ -99,14 +93,7 @@
             }
             .resume{
                 height:150px;
-                overflow: hidden;
-                -webkit-box-orient: vertical;
-                overflow-y: auto;
-                p{
-                    color:var(--sec-text);
-                    font-size: 0.85em;
-                    font-weight: 300;
-                }
+                
             }
             .footer{
                 display: flex;
@@ -164,14 +151,6 @@ export default {
     props:{
         data:Array
     },
-    data:()=>{
-        return{
-            posx:0,
-            posy:0,
-            rY:0,
-            rX:0,
-            cards:[]
-        }
-    }
+    
 }
 </script>
