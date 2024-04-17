@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     '@/assets/css/reset.css',
     '@/assets/css/global.css',
   ],
-  router:{
+  app:{
     baseURL: process.env.NODE_ENV === 'production' ? '/portifolio/' : '/'
   }
 })
