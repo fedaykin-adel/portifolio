@@ -10,6 +10,6 @@ export default defineNuxtConfig({
     '@/assets/css/global.css',
   ],
   app:{
-    baseURL: process.env.NODE_ENV === 'production' ? '/portifolio/' : '/'
+    baseURL: process.env.NODE_ENV == 'production' ? '/portifolio/' : '/'
   }
 })
