@@ -1,10 +1,10 @@
 <!-- Please remove this file from your project -->
 <template>
-    <nav class="line bla" id="line">
+    <nav class="line" id="line">
       <div class="container">
         <div class="navbar">
           <h1>
-            <NuxtLink to="/" key="index" class="logo">
+            <NuxtLink to="links" key="index" class="logo">
               <img src="~/assets/imgs/header/code.svg" class="svg" />
               
               <p class='txt-header'>Gabriel Adelar</p>
@@ -52,7 +52,7 @@
   export default {
     name: 'Navbar',
     data:()=>{
-      return{
+      return{ 
           data:[{
             name:'skill',
             image:'/images/header/skills.svg',
@@ -118,8 +118,6 @@
         .header-desk{
           display: none;
         }
-
-        
         
         .logo{
           width: 100%;

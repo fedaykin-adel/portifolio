@@ -45,6 +45,17 @@
     </div>    
 </template>
 <style scoped lang="scss"> 
+    @mixin tablet{
+        @media screen and (max-width: 1024px) {
+            .card-none,.lines{
+                display: none;
+            }
+            .arround-card{
+                margin:15px 0;
+            }
+        }
+    }
+
     .arround-cards{
         display: flex;
         flex-direction: column;
@@ -133,14 +144,7 @@
             .card-none{
                 width:100%;
             }
-            @media screen and (max-width: 1024px) {
-                .card-none,.lines{
-                    display: none;
-                }
-                .arround-card{
-                    margin:15px 0;
-                }
-            }
+            @include tablet;
         }
     }
     
