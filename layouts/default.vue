@@ -48,26 +48,29 @@
   </template>
 
   <script>
-  
+  import skills from '~/assets/imgs/header/skills.svg'
+  import project from '~/assets/imgs/header/project.svg'
+  import company from '~/assets/imgs/header/company.svg'
+  import education from '~/assets/imgs/header/education.svg'
   export default {
     name: 'Navbar',
     data:()=>{
       return{ 
           data:[{
             name:'skill',
-            image:'/images/header/skills.svg',
+            image:skills,
             route:'skills',
           },{
             name:'Projects',
-            image:'/images/header/project.svg',
+            image:project,
             route:'projects',
           },{
             name:'Experience',
-            image:'/images/header/company.svg',
+            image:company,
             route:'experience',
           },{
             name:'Education',
-            image:'/images/header/education.svg',
+            image:education,
             route:'/education',
           },{
             name:'Resumé',
