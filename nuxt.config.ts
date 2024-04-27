@@ -34,9 +34,10 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
       ]
     },
-    baseURL:process.env.NODE_ENV ==='produciont'? '/portifolio/' :'/'
   },
   
+  // app:{
+  //   baseURL:process.env.NODE_ENV ==='produciont'? '/portifolio/' :'/'
   // }
   // process.env.NODE_ENV ==='produciont'? '/portifolio/' :'/'
   // router: {
