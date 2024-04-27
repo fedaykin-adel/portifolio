@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     '~/assets/css/reset.css',
     '~/assets/css/global.css',
   ],
+  
   app:{
     head: {
       title: 'sortea',
@@ -34,16 +35,14 @@ export default defineNuxtConfig({
       ]
     },
   },
-  build:{
-    publicPath:'/portifolio/'
-  }
+  
   // app:{
-  //   baseURL:'/portifolio'
+  //   process.env.NODE_ENV ==='produciont'? '/portifolio/' :'/'
   // }
-  // process.env.NODE_ENV ==='produciont'? '/portifolio/' :'/'
-  // router: {
-  //   base: '/app/'
-  // }  
+  // 
+  router: {
+    base: '/portifolio/'
+  }  
   
 })
 

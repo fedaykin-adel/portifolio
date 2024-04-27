@@ -11,25 +11,25 @@ export default {
       return{
           data:[{
               name:'JavaCcript',
-              img:'/images/js.png'
+              img:'/portifolio/images/js.png'
           },{
               name:'HTML',
-              img:'/images/html.png',
+              img:'/portifolio/images/html.png',
           },{
               name:'Css',
-              img:'/images/css.png',
+              img:'/portifolio/images/css.png',
           },{
               name:'React',
-              img:'/images/react.png',
+              img:'/portifolio/images/react.png',
           },{
               name:'Python',
-              img:'/images/python.png',
+              img:'/portifolio/images/python.png',
           },{
               name:'Nuxt',
-              img:'/images/nuxt.png',
+              img:'/portifolio/images/nuxt.png',
           },{
               name:'Node',
-              img:'/images/node.png',
+              img:'/portifolio/images/node.png',
           }]
           
       }

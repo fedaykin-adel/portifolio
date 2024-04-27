@@ -4,7 +4,7 @@
       <div class="container">
         <div class="navbar">
           <h1>
-            <NuxtLink to="links" key="index" class="logo">
+            <NuxtLink to="/" key="index" class="logo">
               <img src="~/assets/imgs/header/code.svg" class="svg" />
               
               <p class='txt-header'>Gabriel Adelar</p>
