@@ -12,78 +12,78 @@ export default {
             data:[{
                 "Programming Languages":[{
                     name:'JavaScript',
-                    image:'/portifolio/images/js.png',
+                    image:'/images/js.png',
                 },{
                     name:'Python',
-                    image:'/portifolio/images/python.png',
+                    image:'/images/python.png',
                 },{
                     name:'PHP',
-                    image:'/portifolio/images/php.png',
+                    image:'/images/php.png',
                 },{
                     name:'C/C++',
-                    image:'/portifolio/images/c-c++.png',
+                    image:'/images/c-c++.png',
                 },{
                     name:'Bash',
-                    image:'/portifolio/images/bash.png',
+                    image:'/images/bash.png',
                 }],
                 "Web":[{
                     name:'Html',
-                    image:'/portifolio/images/html.png',    
+                    image:'/images/html.png',    
                 },{
                     name:'Css',
-                    image:'/portifolio/images/css.png',    
+                    image:'/images/css.png',    
                 },{
                     name:'Sass',
-                    image:'/portifolio/images/sass.png',    
+                    image:'/images/sass.png',    
                 },{
                     name:'Scoket-io',
-                    image:'/portifolio/images/socket-io.png',
+                    image:'/images/socket-io.png',
                 }],
                 "Databases":[{
                     name:'Vue',
-                    image:'/portifolio/images/vue.png',
+                    image:'/images/vue.png',
                 },{
                     name:'React',
-                    image:'/portifolio/images/react.png',
+                    image:'/images/react.png',
                 },{
                     name:'Node',
-                    image:'/portifolio/images/node.png',
+                    image:'/images/node.png',
                 },{
                     name:'Nuxt',
-                    image:'/portifolio/images/nuxt.png',
+                    image:'/images/nuxt.png',
                 },{
                     name:'Laravel',
-                    image:'/portifolio/images/laravel.png',
+                    image:'/images/laravel.png',
                 },{
                     name:'React Native',
-                    image:'/portifolio/images/react-native.svg',
+                    image:'/images/react-native.svg',
                 }],
                 "Databases":[{
                     name:'Mysql',
-                    image:'/portifolio/images/mysql.png',
+                    image:'/images/mysql.png',
                 },{
                     name:'MongoDb',
-                    image:'/portifolio/images/mongodb.svg',
+                    image:'/images/mongodb.svg',
                 },{
                     name:'elasticsearch',
-                    image:'/portifolio/images/elasticsearch.png',
+                    image:'/images/elasticsearch.png',
                 },{
                     name:'neo4j',
-                    image:'/portifolio/images/neo4j.png',
+                    image:'/images/neo4j.png',
                 }],
                 "Contêineres":[{
                     name:'Docker',
-                    image:'/portifolio/images/docker.png',
+                    image:'/images/docker.png',
                 },{
                     name:'Kubernates',
-                    image:'/portifolio/images/kubernetes.png',
+                    image:'/images/kubernetes.png',
                 }],
                 "teste":[{
                     name:'jest',
-                    image:'/portifolio/images/jest.webp'  
+                    image:'/images/jest.webp'  
                 },{
                     name:'Cypress',
-                    image:'/portifolio/images/cypress.png'  
+                    image:'/images/cypress.png'  
                 },]
             }]
         }

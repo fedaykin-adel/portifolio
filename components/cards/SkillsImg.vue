@@ -1,7 +1,7 @@
 <template>
     <div class="img-select" >
         <div class="border-withi-radius img">
-            <img class="img-skill" :src="`/portifolio/images/${img}`"/>
+            <img class="img-skill" :src="`/images/${img}`"/>
         </div>
     
         <div class="title">

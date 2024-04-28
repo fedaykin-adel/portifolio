@@ -13,7 +13,7 @@ export default defineNuxtConfig({
   
   app:{
     head: {
-      title: 'sortea',
+      title: 'Portifolio',
       htmlAttrs: {
         lang: 'en'
       },

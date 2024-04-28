@@ -4,7 +4,7 @@
       <div class="container">
         <div class="navbar">
           <h1>
-            <NuxtLink to="/" key="index" class="logo">
+            <NuxtLink to="/portifolio/" key="index" class="logo">
               <img src="~/assets/imgs/header/code.svg" class="svg" />
               
               <p class='txt-header'>Gabriel Adelar</p>
@@ -59,19 +59,19 @@
           data:[{
             name:'skill',
             image:skills,
-            route:'skills',
+            route:'/portifolio/skills',
           },{
             name:'Projects',
             image:project,
-            route:'projects',
+            route:'/portifolio/projects',
           },{
             name:'Experience',
             image:company,
-            route:'experience',
+            route:'/portifolio/experience',
           },{
             name:'Education',
             image:education,
-            route:'/education',
+            route:'/portifolio/education',
           },{
             name:'Resumé',
             image:'',
