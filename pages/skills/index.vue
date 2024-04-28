@@ -12,78 +12,78 @@ export default {
             data:[{
                 "Programming Languages":[{
                     name:'JavaScript',
-                    image:'/images/js.png',
+                    image:'/portifolio/images/js.png',
                 },{
                     name:'Python',
-                    image:'/images/python.png',
+                    image:'/portifolio/images/python.png',
                 },{
                     name:'PHP',
-                    image:'/images/php.png',
+                    image:'/portifolio/images/php.png',
                 },{
                     name:'C/C++',
-                    image:'/images/c-c++.png',
+                    image:'/portifolio/images/c-c++.png',
                 },{
                     name:'Bash',
-                    image:'/images/bash.png',
+                    image:'/portifolio/images/bash.png',
                 }],
                 "Web":[{
                     name:'Html',
-                    image:'/images/html.png',    
+                    image:'/portifolio/images/html.png',    
                 },{
                     name:'Css',
-                    image:'/images/css.png',    
+                    image:'/portifolio/images/css.png',    
                 },{
                     name:'Sass',
-                    image:'/images/sass.png',    
+                    image:'/portifolio/images/sass.png',    
                 },{
                     name:'Scoket-io',
-                    image:'/images/socket-io.png',
+                    image:'/portifolio/images/socket-io.png',
                 }],
                 "Databases":[{
                     name:'Vue',
-                    image:'/images/vue.png',
+                    image:'/portifolio/images/vue.png',
                 },{
                     name:'React',
-                    image:'/images/react.png',
+                    image:'/portifolio/images/react.png',
                 },{
                     name:'Node',
-                    image:'/images/node.png',
+                    image:'/portifolio/images/node.png',
                 },{
                     name:'Nuxt',
-                    image:'/images/nuxt.png',
+                    image:'/portifolio/images/nuxt.png',
                 },{
                     name:'Laravel',
-                    image:'/images/laravel.png',
+                    image:'/portifolio/images/laravel.png',
                 },{
                     name:'React Native',
-                    image:'/images/react-native.svg',
+                    image:'/portifolio/images/react-native.svg',
                 }],
                 "Databases":[{
                     name:'Mysql',
-                    image:'/images/mysql.png',
+                    image:'/portifolio/images/mysql.png',
                 },{
                     name:'MongoDb',
-                    image:'/images/mongodb.svg',
+                    image:'/portifolio/images/mongodb.svg',
                 },{
                     name:'elasticsearch',
-                    image:'/images/elasticsearch.png',
+                    image:'/portifolio/images/elasticsearch.png',
                 },{
                     name:'neo4j',
-                    image:'/images/neo4j.png',
+                    image:'/portifolio/images/neo4j.png',
                 }],
                 "Contêineres":[{
                     name:'Docker',
-                    image:'/images/docker.png',
+                    image:'/portifolio/images/docker.png',
                 },{
                     name:'Kubernates',
-                    image:'/images/kubernetes.png',
+                    image:'/portifolio/images/kubernetes.png',
                 }],
                 "teste":[{
                     name:'jest',
-                    image:'/images/jest.webp'  
+                    image:'/portifolio/images/jest.webp'  
                 },{
                     name:'Cypress',
-                    image:'/images/cypress.png'  
+                    image:'/portifolio/images/cypress.png'  
                 },]
             }]
         }
