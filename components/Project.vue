@@ -6,7 +6,7 @@
             <div class="header">
                 <div class="title">
                     <p>{{ item.title }}</p>
-                    <a :href="item.git" class="link">
+                    <a :href="item.git" target="_blank" class="link">
                         <img src="/images/link.svg" class="svg">
                     </a>
                 </div>
