@@ -7,8 +7,8 @@ export default defineNuxtConfig({
     'nuxt-swiper'
   ],
   css: [
-    '@/assets/css/reset.css',
-    '@/assets/css/global.css',
+    '~/assets/css/reset.css',
+    '~/assets/css/global.css',
   ],
   
   app:{
