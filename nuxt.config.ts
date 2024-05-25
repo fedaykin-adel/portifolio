@@ -12,6 +12,7 @@ export default defineNuxtConfig({
   ],
   
   app:{
+    baseURL:'/portifolio/',
     head: {
       title: 'Portifolio',
       htmlAttrs: {
