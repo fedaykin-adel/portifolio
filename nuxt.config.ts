@@ -11,7 +11,7 @@ export default defineNuxtConfig({
   //   '@/assets/css/global.css',
   // ],
   app:{
-    // baseURL:'/portifolio/',
+    baseURL:'/portifolio/',
     head: {
       title: 'Portifolio',
       htmlAttrs: {
