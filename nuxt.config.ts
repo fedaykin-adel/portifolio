@@ -6,13 +6,12 @@ export default defineNuxtConfig({
   modules:[
     'nuxt-swiper'
   ],
-  css: [
-    '@/assets/css/reset.css',
-    '@/assets/css/global.css',
-  ],
-  
+  // css: [
+  //   '@/assets/css/reset.css',
+  //   '@/assets/css/global.css',
+  // ],
   app:{
-    baseURL:'/portifolio/',
+    // baseURL:'/portifolio/',
     head: {
       title: 'Portifolio',
       htmlAttrs: {

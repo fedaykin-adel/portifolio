@@ -94,8 +94,8 @@
   }
   </script>
 
-<!-- @import '@/assets/css/reset.css';
-@import '@/assets/css/global.css'; -->
+<style src="@/assets/css/reset.css"></style>
+<style src="@/assets/css/global.css"></style>
   <style scoped lang="scss">
     @mixin tablet{
         
