@@ -94,9 +94,9 @@
   }
   </script>
 
+<!-- @import '@/assets/css/reset.css';
+@import '@/assets/css/global.css'; -->
   <style scoped lang="scss">
-    @import '@/assets/css/reset.css';
-    @import '@/assets/css/global.css';
     @mixin tablet{
         
       @media screen and (max-width: 950px){
