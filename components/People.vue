@@ -55,8 +55,12 @@
     </div>
 </template>
 <script>
+// import { Swiper, SwiperSlide } from "swiper/vue";
+// import { Autoplay as SwiperAutoplay, EffectCreative as SwiperEffectCreative } from 'swiper';
+// import "swiper/css";
 
 export default {
+    
     props:{
         data:Array
     }
