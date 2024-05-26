@@ -7,7 +7,7 @@
             
             <CardsCard
                 v-for="(value, indexValue) in item" :key="indexValue" 
-                :style="{'--bg-img': `url(${value.image})` }"
+                :style="{'--bg-img': `url(${processUrlImage(value.image)})` }"
                 class="card"
             >
                 <p class="txt">{{value.name}}</p>
@@ -19,9 +19,12 @@
     
 </template>
 <script>
+import processUrlImage from '~/utils/processUrlImage'
 
 export default {
-   
+    methods:{
+        processUrlImage
+    },
     props:{
         data:Array
     }
