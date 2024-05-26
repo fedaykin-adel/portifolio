@@ -5,31 +5,32 @@
 
 
 <script>
+import trataImagem from '@/utils/trataImage'
 export default {
   name: 'IndexPage',
   data:()=>{
       return{
           data:[{
               name:'JavaCcript',
-              img:'/images/js.png'
+              img:trataImagem('/images/js.png') 
           },{
               name:'HTML',
-              img:'/images/html.png',
+              img:trataImagem('/images/html.png'),
           },{
               name:'Css',
-              img:'/images/css.png',
+              img:trataImagem('/images/css.png'),
           },{
               name:'React',
-              img:'/images/react.png',
+              img:trataImagem('/images/react.png'),
           },{
               name:'Python',
-              img:'/images/python.png',
+              img:trataImagem('/images/python.png'),
           },{
               name:'Nuxt',
-              img:'/images/nuxt.png',
+              img:trataImagem('/images/nuxt.png'),
           },{
               name:'Node',
-              img:'/images/node.png',
+              img:trataImagem('/images/node.png'),
           }]
           
       }

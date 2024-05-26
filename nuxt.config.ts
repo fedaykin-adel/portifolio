@@ -10,9 +10,7 @@ export default defineNuxtConfig({
   //   '@/assets/css/reset.css',
   //   '@/assets/css/global.css',
   // ],
-  router: {
-    base: '/portifolio/',
-  },
+  
   app:{
     baseURL:process.env.NODE_ENV ==='produciont'? '/portifolio/' :'/',
     head: {
@@ -47,5 +45,5 @@ export default defineNuxtConfig({
   //   base: '/app/'
   // }  
   
-})
+});
 

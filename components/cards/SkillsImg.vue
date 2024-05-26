@@ -1,7 +1,7 @@
 <template>
     <div class="img-select" >
         <div class="border-withi-radius img">
-            <img class="img-skill" :src="`/images/${img}`"/>
+            <img class="img-skill" :src="trataImagem(`/images/${img}`)"/>
         </div>
     
         <div class="title">
@@ -55,10 +55,15 @@
     }
 </style>
 <script>
+import trataImagem from '@/utils/trataImage'
+
 export default {
     props:{
         img:String,
         title:String
+    },
+    methods:{
+        trataImagem
     }
 }
 </script>

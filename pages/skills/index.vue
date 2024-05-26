@@ -6,84 +6,86 @@
 
 </template>
 <script>
+import trataImagem from '@/utils/trataImage'
+
 export default {
     data:()=>{
         return{
             data:[{
                 "Programming Languages":[{
                     name:'JavaScript',
-                    image:'/images/js.png',
+                    image:trataImagem('/images/js.png'),
                 },{
                     name:'Python',
-                    image:'/images/python.png',
+                    image:trataImagem('/images/python.png'),
                 },{
                     name:'PHP',
-                    image:'/images/php.png',
+                    image:trataImagem('/images/php.png'),
                 },{
                     name:'C/C++',
-                    image:'/images/c-c++.png',
+                    image:trataImagem('/images/c-c++.png'),
                 },{
                     name:'Bash',
-                    image:'/images/bash.png',
+                    image:trataImagem('/images/bash.png'),
                 }],
                 "Web":[{
                     name:'Html',
-                    image:'/images/html.png',    
+                    image:trataImagem('/images/html.png'),    
                 },{
                     name:'Css',
-                    image:'/images/css.png',    
+                    image:trataImagem('/images/css.png'),    
                 },{
                     name:'Sass',
-                    image:'/images/sass.png',    
+                    image:trataImagem('/images/sass.png'),    
                 },{
                     name:'Scoket-io',
-                    image:'/images/socket-io.png',
+                    image:trataImagem('/images/socket-io.png'),
                 }],
                 "Databases":[{
                     name:'Vue',
-                    image:'/images/vue.png',
+                    image:trataImagem('/images/vue.png'),
                 },{
                     name:'React',
-                    image:'/images/react.png',
+                    image:trataImagem('/images/react.png'),
                 },{
                     name:'Node',
-                    image:'/images/node.png',
+                    image:trataImagem('/images/node.png'),
                 },{
                     name:'Nuxt',
-                    image:'/images/nuxt.png',
+                    image:trataImagem('/images/nuxt.png'),
                 },{
                     name:'Laravel',
-                    image:'/images/laravel.png',
+                    image:trataImagem('/images/laravel.png'),
                 },{
                     name:'React Native',
-                    image:'/images/react-native.svg',
+                    image:trataImagem('/images/react-native.svg'),
                 }],
                 "Databases":[{
                     name:'Mysql',
-                    image:'/images/mysql.png',
+                    image:trataImagem('/images/mysql.png'),
                 },{
                     name:'MongoDb',
-                    image:'/images/mongodb.svg',
+                    image:trataImagem('/images/mongodb.svg'),
                 },{
                     name:'elasticsearch',
-                    image:'/images/elasticsearch.png',
+                    image:trataImagem('/images/elasticsearch.png'),
                 },{
                     name:'neo4j',
-                    image:'/images/neo4j.png',
+                    image:trataImagem('/images/neo4j.png'),
                 }],
                 "Contêineres":[{
                     name:'Docker',
-                    image:'/images/docker.png',
+                    image:trataImagem('/images/docker.png'),
                 },{
                     name:'Kubernates',
-                    image:'/images/kubernetes.png',
+                    image:trataImagem('/images/kubernetes.png'),
                 }],
                 "teste":[{
                     name:'jest',
-                    image:'/images/jest.webp'  
+                    image:trataImagem('/images/jest.webp')  
                 },{
                     name:'Cypress',
-                    image:'/images/cypress.png'  
+                    image:trataImagem('/images/cypress.png')  
                 },]
             }]
         }
