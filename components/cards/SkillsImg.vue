@@ -1,7 +1,7 @@
 <template>
     <div class="img-select" >
         <div class="border-withi-radius img">
-            <img class="img-skill" :src="trataImagem(`/images/${img}`)"/>
+            <img class="img-skill" :src="processUrlImage(`/images/${img}`)"/>
         </div>
     
         <div class="title">
@@ -55,7 +55,7 @@
     }
 </style>
 <script>
-import trataImagem from '@/utils/trataImage'
+import processUrlImage from '~/utils/processUrlImage'
 
 export default {
     props:{
@@ -63,7 +63,7 @@ export default {
         title:String
     },
     methods:{
-        trataImagem
+        processUrlImage
     }
 }
 </script>

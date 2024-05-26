@@ -41,7 +41,7 @@
                     
                     <SwiperSlide v-for="(item, idx) in data" :key="idx" class="blaa">
                         <div class="imags-slides">
-                            <img :src="item.img" class="img-slide">
+                            <img :src=processUrlImage(item.img) class="img-slide">
                             <p>{{item.name}}</p>
                         </div>
                     </SwiperSlide>
@@ -58,9 +58,11 @@
 // import { Swiper, SwiperSlide } from "swiper/vue";
 // import { Autoplay as SwiperAutoplay, EffectCreative as SwiperEffectCreative } from 'swiper';
 // import "swiper/css";
-
+import processUrlImage from '~/utils/processUrlImage'
 export default {
-    
+    methods:{
+        processUrlImage
+    },
     props:{
         data:Array
     }
