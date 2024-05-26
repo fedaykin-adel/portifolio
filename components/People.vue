@@ -41,7 +41,7 @@
                     
                     <SwiperSlide v-for="(item, idx) in data" :key="idx" class="blaa">
                         <div class="imags-slides">
-                            <img :src=processUrlImage(item.img) class="img-slide">
+                            <img :src="processUrlImage(item.img)" class="img-slide">
                             <p>{{item.name}}</p>
                         </div>
                     </SwiperSlide>

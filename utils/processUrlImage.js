@@ -1,5 +1,7 @@
-// let trataImage 
-export default (img)=>{
-    return process.env.NODE_ENV === 'production' ? '/portifolio' : '' + img
 
+export default (img)=>{
+    if (process.env.NODE_ENV === 'production'){
+        return '/portifolio' + img 
+    }
+    return img
 }
