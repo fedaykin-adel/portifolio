@@ -1,7 +1,7 @@
 <template>
     <div class="img-select" >
         <div class="border-withi-radius img">
-            <img class="img-skill" :src="processUrlImage(`/images/${img}`)"/>
+            <img class="img-skill" :src="img"/>
         </div>
     
         <div class="title">
@@ -55,15 +55,10 @@
     }
 </style>
 <script>
-import processUrlImage from '~/utils/processUrlImage'
-
 export default {
     props:{
         img:String,
         title:String
-    },
-    methods:{
-        processUrlImage
     }
 }
 </script>

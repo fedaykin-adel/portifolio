@@ -24,8 +24,8 @@
                             <CardsSkillsImg 
                                 v-for="(skill, idxx) in item.skills" 
                                 :key="idxx" 
-                                :img="skill.img" 
-                                :title="skill.title"
+                                :img="skill.image" 
+                                :title="skill.name"
                             />                                
                                 
                         </div>

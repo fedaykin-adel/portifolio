@@ -1,18 +1,17 @@
 <template>
     <div v-for="(abilities, idx) in data" :key="idx">
-        
-        <div v-for="(item, indexAbilities) in abilities" :key="indexAbilities" class="abilities">
+        <UtilsLineHorizontal :txt="abilities.name"/>
+        <div  class="abilities" >
             
-            <UtilsLineHorizontal :txt="indexAbilities"/>
-            
+            <!-- v-if="item.show_on_ability_tree === true" -->
             <CardsCard
-                v-for="(value, indexValue) in item" :key="indexValue" 
-                :style="{'--bg-img': `url(${processUrlImage(value.image)})` }"
+                
+                v-for="(item, indexAbilities) in abilities.abilitity?.filter(i=>i.show_on_ability_tree ) " :key="indexAbilities"
+                :style="{'--bg-img': `url(${processUrlImage(item.image)})` }"
                 class="card"
-            >
-                <p class="txt">{{value.name}}</p>
+            >   
+                <p class="txt">{{item.name}}</p>
             </CardsCard>
-
         </div>
     
     </div>

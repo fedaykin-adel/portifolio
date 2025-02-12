@@ -27,8 +27,8 @@
                     <CardsSkillsImg 
                         v-for="(skill, idx) in item.tecnologis" 
                         :key="idx" 
-                        :img="skill.img" 
-                        :title="skill.title"
+                        :img="skill.image" 
+                        :title="skill.name"
                     /> 
                 </div>
             </div>

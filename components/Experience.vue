@@ -7,7 +7,7 @@
             
                     <div class="content-card">
                         <div class="title">
-                            <p class="text-title">{{ item.company }} - {{ item.cargo}}</p>
+                            <p class="text-title">{{ item.company_name }} - {{ item.position}}</p>
                         </div>
                         <div class="locals">
                             <div v-for="(local, idx) in item.localwork" :key="idx" class="local">
@@ -24,8 +24,8 @@
                             <CardsSkillsImg 
                                 v-for="(skill, idxx) in item.skills" 
                                 :key="idxx" 
-                                :img="skill.img" 
-                                :title="skill.title"
+                                :img="skill.image" 
+                                :title="skill.name"
                             />                                
                                 
                         </div>
